@@ -1,0 +1,153 @@
+/* --- Page container --- */
+.list-page-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* --- Card container --- */
+.list-card {
+  width: 95%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+/* --- Search controls --- */
+.list-controls {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.search-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-input-group label {
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* --- List table --- */
+.list-table {
+  display: grid;
+  grid-template-rows: auto 1fr; /* header + body */
+  gap: 8px;
+}
+
+/* Header row */
+.list-header {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 2fr; /* Adjust widths */
+  gap: 20px; /* Space between header cells */
+  background-color: #f3f4f6;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Header cell padding */
+.list-header div {
+  padding-left: 33px;
+  padding-right: 33px;
+  display: flex;
+  align-items: center;
+}
+
+/* Body rows */
+.list-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-row {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 2fr; /* Same as header for alignment */
+  gap: 16px; /* Match header spacing */
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  align-items: center;
+  background-color: #fefefe;
+  transition: background-color 0.2s;
+}
+
+.list-row:hover {
+  background-color: #f3f4f6;
+}
+
+/* Placeholder data boxes */
+.data-placeholder {
+  background-color: #e5e7eb;
+  height: 30px;
+  border-radius: 6px;
+}
+
+/* Action buttons */
+.action-cell {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-start;
+}
+
+.action-link {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  color: #ffffff;
+  background-color: #2563eb;
+}
+
+.action-link:hover {
+  background-color: #1d4ed8;
+}
+
+.action-suspend {
+  background-color: #bb0f0f;
+}
+
+.action-suspend:hover {
+  background-color: #7f0a0a;
+}

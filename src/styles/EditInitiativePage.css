@@ -1,0 +1,187 @@
+/* --- Page container --- */
+.initiative-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+/* --- Form container --- */
+.initiative-container {
+  width: 95%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+/* --- Header bar --- */
+.initiative-header-bar {
+  height: 4px;
+  background-color: #207431;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+/* --- Form --- */
+.initiative-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* --- Two main sections --- */
+.initiative-sections {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.initiative-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Form fields --- */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Input styles - white background */
+.form-input-grey,
+.form-input-blue-border,
+.form-select-grey,
+textarea {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #cac3c3; /* White background */
+  color: #000000;
+}
+
+.form-input-grey:focus,
+.form-select-grey:focus,
+.form-input-blue-border:focus,
+textarea:focus {
+  outline: none;
+  border-color: #26912dbe;
+  box-shadow: 0 0 0 2px rgba(19, 134, 38, 0.2);
+}
+
+/* Textarea styling */
+textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+/* --- Icon fields: icons next to inputs --- */
+.icon-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon button style */
+.icon-button {
+  background-color: #5a0c0c;
+  border: none;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}
+
+/* Hide native file input */
+.hidden-input {
+  display: none;
+}
+
+/* --- Buttons --- */
+.form-actions-new {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btn-confirm {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-confirm:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-link-return {
+  color: #5a0c0c;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-link-return:hover {
+  color: #1d4ed8;
+}
+
+.btn-add-achievement-icon-only {
+  background-color: #65db9e;
+  border: none;
+  border-radius: 20%;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-add-achievement-icon-only:hover {
+  background-color: #a7f3d0;
+}
+
+/* --- Icon group vertical (if needed) --- */
+.icon-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

@@ -1,0 +1,88 @@
+/* Conteneur principal de la navbar */
+.navbar {
+  background-color: #0b1a33; /* bleu nuit foncé (tu peux ajuster) */
+  padding: 10px 0;
+  width: 100%;
+  direction: rtl; /* Alignement pour l'arabe */
+}
+
+/* Flexbox interne */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Liens centraux */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  margin: 0;
+}
+
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+  color: #49566b; /* doré au survol */
+}
+
+/* Séparateur entre les liens */
+.divider {
+  color: white;
+  opacity: 0.5;
+  padding: 0 5px;
+}
+
+/* Icône Home */
+.navbar-right {
+  margin-right: 10px;
+}
+
+.home-link {
+  color: white;
+  text-decoration: none;
+}
+
+.home-icon {
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.home-icon:hover {
+  color: #49566b; /* doré au survol */
+}
+
+/* Bouton langue */
+.navbar-left {
+  margin-left: 10px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.lang-btn:hover {
+  color: #49566b;
+}

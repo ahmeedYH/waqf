@@ -1,0 +1,29 @@
+.gallery-section {
+  background-image: url("../assets/bg_header.jpg"); /* optionnel : motif léger */
+  background-size: cover;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px; /* espace entre les photos */
+  flex-wrap: nowrap;
+  overflow-x: auto; /* permet le scroll horizontal si trop d’images */
+}
+
+.gallery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  flex-shrink: 0;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

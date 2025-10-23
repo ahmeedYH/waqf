@@ -1,0 +1,48 @@
+/* 1. Importations Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Styles de base (Correction Overflow) */
+/* Force la page à prendre 100% de la largeur/hauteur */
+/* et cache tout débordement horizontal (l'espace blanc) */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* <-- Correction clé */
+  box-sizing: border-box;
+}
+
+/* 3. Layout Flexbox pour l'application */
+/* Force l'application à s'étendre sur toute la hauteur */
+/* et à empiler les enfants verticalement */
+.app {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 4. Style pour le contenu principal (<main>) */
+/* Le contenu prend tout l'espace vertical restant */
+/* mais est centré dans une boîte de 1280px */
+main {
+  /* Prend tout l'espace vertical disponible */
+  flex-grow: 1;
+
+  /* Centre le contenu (comme votre ancien #root) */
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Ajoute de l'espace intérieur */
+  padding: 2rem;
+  box-sizing: border-box; /* Garantit que le padding ne casse pas la largeur */
+
+  color: #1a1a1a; /* Un noir foncé (ou 'black' si vous préférez) */
+}
