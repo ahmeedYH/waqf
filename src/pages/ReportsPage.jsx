@@ -9,15 +9,15 @@ import "../styles/ReportsPage.css";
 const reports = [
   {
     title: "خطة عمل المؤسسة لمساعدة مرضى السرطان",
-    url: "#", // Mettez le lien vers le PDF ici
+    url: "reports", // Mettez le lien vers le PDF ici
   },
   {
     title: "التقرير السنوي لمنصة الأوقاف",
-    url: "#",
+    url: "reports",
   },
   {
     title: "دراسة جدوى للمركز التجاري",
-    url: "#",
+    url: "reports",
   },
 ];
 
