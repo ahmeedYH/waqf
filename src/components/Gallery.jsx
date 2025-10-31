@@ -6,9 +6,8 @@ import img3 from "../assets/image-modawanat-awkaf.jpg";
 import img4 from "../assets/logo-Habous-Ar.png";
 import img5 from "../assets/texte-Ar.png";
 
-
 const Gallery = () => {
-  const images = [img3, img2, img5, img4];
+  const images = [img4, img2, img5, img3];
 
   return (
     <div

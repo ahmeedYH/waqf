@@ -32,13 +32,13 @@
 .navbar-item a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 16px flex;
   padding: 0 10px;
   transition: color 0.3s;
 }
 
 .navbar-item a:hover {
-  color: #49566b; /* doré au survol */
+  color: #08ceb4;
 }
 
 /* Séparateur entre les liens */
@@ -65,7 +65,7 @@
 }
 
 .home-icon:hover {
-  color: #49566b; /* doré au survol */
+  color: #08ceb4;
 }
 
 /* Bouton langue */
@@ -84,5 +84,5 @@
 }
 
 .lang-btn:hover {
-  color: #49566b;
+  color: #08ceb4;
 }

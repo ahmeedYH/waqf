@@ -1,0 +1,167 @@
+body {
+  background-color: #faf8f7;
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+
+.form-container {
+  width: 80%;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.project-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  background-color: #faf8f7;
+  color: #333;
+}
+
+.form-row textarea {
+  resize: none;
+  height: 60px;
+}
+
+.submit-btn {
+  grid-column: span 2;
+  background-color: #4a76f0;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+  justify-self: start; /* <-- ici */
+}
+
+.submit-btn:hover {
+  background-color: #335fdc;
+}
+
+@media (max-width: 768px) {
+  .project-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+  display: block;
+}
+
+.helper-text {
+  font-size: 0.85em;
+  color: #777;
+  margin-top: 3px;
+}
+
+/* === Bloc "الجهة المسؤولة" === */
+.responsible-entity-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.responsible-entity-row input[type="text"] {
+  flex: 1;
+}
+
+.logo-upload-icon {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: transform 0.2s ease;
+}
+
+.logo-upload-icon:hover {
+  transform: scale(1.05);
+}
+
+.logo-default-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.logo-preview-small {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.pdf-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdf-label-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.pdf-icon {
+  width: 40px;
+  height: 40px;
+}
+.pdf-icon:hover {
+  transform: scale(1.05);
+}
+.file-name-textarea {
+  resize: none; /* Empêche le redimensionnement */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+  width: 300px; /* Largeur fixe ou ajustable */
+  height: 50px;
+  overflow: hidden; /* Empêche la scrollbar verticale si une seule ligne */
+}

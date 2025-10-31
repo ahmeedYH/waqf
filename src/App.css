@@ -46,3 +46,9 @@ main {
 
   color: #1a1a1a; /* Un noir foncé (ou 'black' si vous préférez) */
 }
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 16px;
+  color: #15367c;
+}

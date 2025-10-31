@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/InitiativeSuspension.css";
+import "../styles/ProjectLocalisation.css";
 
 export default function InitiativeList() {
   const navigate = useNavigate();
@@ -11,8 +11,8 @@ export default function InitiativeList() {
   const dummyData = [1, 2, 3];
 
   // Go to Create Project
-  const goToInintiativeAdd = () => {
-    navigate("/initiatives/add");
+  const goToCreateProject = () => {
+    navigate("/projects/create");
   };
 
   // Show confirmation popup
@@ -49,8 +49,8 @@ export default function InitiativeList() {
         {/* Table section */}
         <div className="list-table">
           <div className="list-header">
-            <div>اسم المبادرة</div>
-            <div>هدف التنمية المستدامة</div>
+            <div>اسم المشروع</div>
+            <div> الجهة المسؤولة</div>
             <div>المبلغ المراد تعبئته</div>
             <div></div>
           </div>
@@ -69,7 +69,7 @@ export default function InitiativeList() {
                 </div>
 
                 <div className="action-cell">
-                  <button className="action-link" onClick={goToInintiativeAdd}>
+                  <button className="action-link" onClick={goToCreateProject}>
                     تعديل
                   </button>
                   <button

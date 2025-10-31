@@ -29,13 +29,19 @@ const SousNavbar = () => {
         { label: "تعديل مبادرة وقفية", to: "/initiatives/edit" },
         { label: "تعليق مبادرة وقفية", to: "/initiatives/suspension" },
         { label: "عرض المبادرات", to: "/initiatives" },
-        { label: "التحويلات و  الايداعات", to: "/initiatives" },
+        { label: "التحويلات و  الايداعات", to: "/operation" },
       ],
     },
     {
       key: "projects",
       label: "المشاريع الوقفية",
-      items: [{ label: "عرض المشاريع", to: "/projects" }],
+      items: [
+        { label: "إضافة مشروع وقفي", to: "/projects/create" },
+        { label: "تعديل مشروع وقفي", to: "/projects/localisation" },
+        { label: "تعليق مشروع وقفي", to: "/projects" },
+        { label: "الاطلاع على المشاريع", to: "/projects" }, // "projects/show" ou "/projects"
+        { label: "التحويلات والإيداعات", to: "/operation" },
+      ],
     },
     {
       key: "awqaf",
@@ -45,7 +51,7 @@ const SousNavbar = () => {
     {
       key: "certificates",
       label: "الشهادات",
-      items: [{ label: "عرض الشهادات", to: "/certificates" }],
+      items: [{ label: "عرض الشهادات", to: "/attestation" }],
     },
     {
       key: "reports",
@@ -55,7 +61,10 @@ const SousNavbar = () => {
     {
       key: "accounts",
       label: "إدارة الحسابات",
-      items: [{ label: "عرض الحسابات", to: "/accounts" }],
+      items: [
+        { label: "عرض الحسابات", to: "/accounts" },
+        { label: "إضافة الحسابات", to: "/accounts/add" },
+      ],
     },
   ];
 

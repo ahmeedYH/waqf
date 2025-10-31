@@ -1,0 +1,77 @@
+.user-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.user-form {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.permissions-section table {
+  border-collapse: collapse;
+  background-color: #f8f8f8;
+  width: 450px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.permissions-section th {
+  background-color: #777;
+  color: white;
+  padding: 10px;
+}
+
+.permissions-section td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.permissions-section input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.user-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-row input {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  background-color: #4a6ff0;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #3a5ed0;
+}

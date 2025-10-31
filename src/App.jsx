@@ -1,71 +1,74 @@
-import React from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet, // 1. Importer Outlet
-} from "react-router-dom";
+import React, { Suspense, lazy } from "react";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Gallery from "./components/Gallery";
 import SousNavbar from "./components/SousNavbar";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import ProjectsPage from "./pages/ProjectsPage";
-import AwqafPage from "./pages/AwqafPage";
-import ReportsPage from "./pages/ReportsPage";
-import CertificatesPage from "./pages/CertificatesPage";
-import AccountsPage from "./pages/AccountsPage";
-import InitiativesPage from "./pages/initiativesPage";
 import "./App.css";
 import "./index.css";
-import InitiativeForm from "./pages/InitiativeForm";
-import EditIntiativePage from "./pages/EditInitiativePage";
-import InitiativeSuspension from "./pages/IntiativeSuspension";
 
-// 2. Créer un composant "Layout" qui contient la structure de la page
-// L'Outlet affichera les pages enfants (InitiativesPage, ProjectsPage, etc.)
-const AppLayout = () => {
-  return (
-    <>
-      <Navbar />
-      <Gallery />
-      <SousNavbar />
-      <main>
-        {/* C'est ici que vos pages s'afficheront */}
+// 🔹 Lazy import des pages
+const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
+const AwqafPage = lazy(() => import("./pages/AwqafPage"));
+const ReportsPage = lazy(() => import("./pages/ReportsPage"));
+const CertificatesPage = lazy(() => import("./pages/CertificatesPage"));
+const AccountsPage = lazy(() => import("./pages/AccountsPage"));
+const InitiativesPage = lazy(() => import("./pages/InitiativesPage"));
+const InitiativeForm = lazy(() => import("./pages/InitiativeForm"));
+const EditIntiativePage = lazy(() => import("./pages/EditInitiativePage"));
+const InitiativeSuspension = lazy(() => import("./pages/IntiativeSuspension"));
+const CreateProject = lazy(() => import("./pages/CreateProject"));
+const ProjectLocalisation = lazy(() => import("./pages/ProjectLocalisation"));
+const SearchOperationWaqf = lazy(() => import("./pages/SearchOperationWaqf"));
+const SearchAttestationPage = lazy(() =>
+  import("./pages/SearchAttestationPage")
+);
+const UserCreationPage = lazy(() => import("./pages/UserCreationPage"));
+
+// 🧩 Layout principal
+const AppLayout = () => (
+  <>
+    <Navbar />
+    <Gallery />
+    <SousNavbar />
+    <main>
+      <Suspense fallback={<div className="loading">Chargement...</div>}>
         <Outlet />
-      </main>
-    </>
-  );
-};
+      </Suspense>
+    </main>
+  </>
+);
 
-// 3. Configurer le router pour utiliser ce Layout
+// ⚙️ Configuration du router
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AppLayout />, // Utiliser le composant Layout comme élément principal
+    element: <AppLayout />,
     children: [
-      // Ces enfants seront rendus à l'intérieur de l'Outlet
-      // 👇 2. MODIFIEZ VOS ROUTES 'initiatives'
-      { index: true, element: <InitiativesPage /> }, // Page d'accueil
-
-      // L'ancienne route, vous pouvez la supprimer ou la garder
-      // { path: "initiatives", element: <InitiativesPage /> },
-
-      // Les nouvelles routes
+      { index: true, element: <InitiativesPage /> },
       { path: "initiatives", element: <InitiativesPage /> },
       { path: "initiatives/add", element: <InitiativeForm /> },
       { path: "initiatives/edit", element: <EditIntiativePage /> },
       { path: "initiatives/suspension", element: <InitiativeSuspension /> },
+      { path: "operation", element: <SearchOperationWaqf /> },
 
-      { path: "projects", element: <ProjectsPage /> },
+      { path: "projects", element: <ProjectLocalisation /> },
+      { path: "projects/create", element: <CreateProject /> },
+      { path: "projects/localisation", element: <ProjectLocalisation /> },
+      { path: "operation", element: <SearchOperationWaqf /> },
+
       { path: "awqaf", element: <AwqafPage /> },
-      { path: "certificates", element: <CertificatesPage /> },
+      { path: "attestation", element: <SearchAttestationPage /> },
       { path: "reports", element: <ReportsPage /> },
       { path: "accounts", element: <AccountsPage /> },
+      { path: "accounts/add", element: <UserCreationPage /> },
     ],
   },
 ]);
 
+// 🚀 App principale
 export default function App() {
   return (
     <div className="app">
